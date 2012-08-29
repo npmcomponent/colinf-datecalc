@@ -1,0 +1,13 @@
+{
+  "name": "datecalc",
+  "version": "0.0.1",
+  "description": "A few date utilities",
+  "keywords": ["date", "datecalc", "age", "daysInMonth"],
+  "author": "Colin Fallon <colin@colinfallon.com>",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "main": "index"
+}
