@@ -2,6 +2,14 @@
   "name": "datecalc",
   "version": "0.0.1",
   "description": "A few date utilities",
-  "keywords": ["date", "datecalc", "age", "daysInMonth"],
-  "scripts": ["index.js"]
+  "keywords": [
+    "date",
+    "datecalc",
+    "age",
+    "daysInMonth"
+  ],
+  "scripts": [
+    "index.js"
+  ],
+  "license": "MIT"
 }
