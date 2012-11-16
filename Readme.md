@@ -14,19 +14,19 @@ var daysInFeb2012 = datecalc.daysInMonth(2012,1);
 ```
 
 ### API ###
-  - [.daysInMonth(year, month)](#daysinmonth)
-  - [.age(fromDate, toDate)](#age)
-  - [.ageInWeeks(fromDate, toDate)](#ageinweeks)
-  - [.removeTime(date)](#removetime)
+  - [.daysInMonth(year, month)](#daysinmonthyear-month)
+  - [.age(fromDate, toDate)](#agefromdate-todate)
+  - [.ageInWeeks(fromDate, toDate)](#ageinweeksfromdate-todate)
+  - [.removeTime(date)](#removetimedate)
 
-### .daysInMonth(year, month) [daysinmonth]
+### .daysInMonth(year, month)
 Returns the days in the given month. Year should be a number in the form YYYY and month is zero-based i.e. 0 is January, 1 is February.
 ```js
 var datecalc = require('datecalc');
 var daysInFeb2012 = datecalc.daysInMonth(2012,1);
 ```
 
-### .age(fromDate, toDate) [age]
+### .age(fromDate, toDate)
 Calculates the difference between two dates in years, months and days. Returns an object in the form {years: n, months: n, days: n}. `fromDate` and `toDate` must both be valid Date objects and `toDate` must be after `fromDate`, otherwise an Error is thrown.
 ```js
 var datecalc = require('datecalc');
@@ -37,7 +37,7 @@ In this example age is set to the object:
 { years: 11, months: 0, days: 6 }
 ```
 
-### .ageInWeeks(fromDate, toDate) [ageinweeks]
+### .ageInWeeks(fromDate, toDate)
 Calculates the difference between two dates in weeks and days. Returns an object in the form {weeks: n, days: n}. `fromDate` and `toDate` must both be valid Date objects and `toDate` must be after `fromDate`, otherwise an Error is thrown.
 ```js
 var datecalc = require('datecalc');
@@ -48,7 +48,7 @@ In this example ageInWeeks is set to the object:
 { weeks: 11, months: 0, days: 6 }
 ```
 
-### .removeTime(date) [removetime]
+### .removeTime(date)
 Returns a new Date with the time portion of `date` set to 0:00:00.000 
 
 ### License ###
