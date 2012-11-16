@@ -1,14 +1,32 @@
 
-var age = exports.age =  function(fromDt, toDt){
+var ageInWeeks = exports.ageInWeeks =  function(fromDt, toDt) {
+  var error;
+  if (error = validateDates(fromDt, toDt)) {
+    throw new Error("datecalc.ageInWeeks: "+error);
+  }
 
-  if (!(fromDt instanceof Date)) {
-    throw new Error("agecalc(): First arg must be a Date object");
-  }
-  if (!(toDt instanceof Date)) {
-    throw new Error("agecalc(): Second arg must be a Date object");
-  }
-  if (!(toDt > fromDt)) {
-    throw new Error("agecalc(): Second arg must be after first arg");
+  fromDt = removeTime(fromDt);
+  toDt = removeTime(toDt);
+
+  var ageInDays = Math.round((toDt - fromDt) / (1000*60*60*24));
+
+  return { weeks: Math.floor(ageInDays/7), days: ageInDays%7 };
+}
+
+var removeTime = exports.removeTime =  function(date) {
+  var newDate = new Date(date);
+  newDate.setHours(0);
+  newDate.setMinutes(0);
+  newDate.setSeconds(0);
+  newDate.setMilliseconds(0);
+  return newDate;
+}
+
+
+var age = exports.age =  function(fromDt, toDt) {
+  var error;
+  if (error = validateDates(fromDt, toDt)) {
+    throw new Error("datecalc.age: "+error);
   }
 
   // Get YMD from fromDt and toDt
@@ -58,4 +76,17 @@ var age = exports.age =  function(fromDt, toDt){
 
 var daysInMonth = exports.daysInMonth =  function (year, month) {
     return new Date(year, month+1, 0).getDate();
+}
+
+var validateDates = function(from, to) {
+  if (!(from instanceof Date)) {
+    return "First arg must be a Date object";
+  }
+  if (!(to instanceof Date)) {
+    return "Second arg must be a Date object";
+  }
+  if (!(to > from)) {
+    return "Second arg must be after first arg";
+  }
+  return '';
 }

@@ -1,8 +1,8 @@
 {
   "name": "datecalc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A few date utilities",
-  "keywords": ["date", "datecalc", "age", "daysInMonth"],
+  "keywords": ["date", "datecalc", "age", "daysInMonth", "ageInWeeks"],
   "author": "Colin Fallon <colin@colinfallon.com>",
   "dependencies": {},
   "devDependencies": {
