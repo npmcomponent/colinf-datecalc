@@ -1,13 +1,14 @@
 {
-  "name": "datecalc",
-  "version": "0.0.2",
+  "name": "colinf-datecalc",
   "description": "A few date utilities",
-  "keywords": ["date", "datecalc", "age", "daysInMonth", "ageInWeeks"],
-  "author": "Colin Fallon <colin@colinfallon.com>",
+  "version": "0.0.2",
+  "keywords": [
+    "date",
+    "datecalc",
+    "age",
+    "daysInMonth",
+    "ageInWeeks"
+  ],
   "dependencies": {},
-  "devDependencies": {
-    "mocha": "*",
-    "should": "*"
-  },
-  "main": "index"
+  "license": "MIT"
 }
